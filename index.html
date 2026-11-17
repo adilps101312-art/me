@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Hiba ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div id="passwordScreen">
+    <div class="password-box">
+        <h1>❤️ Welcome My Love ❤️</h1>
+        <p>Only for my Hiba KK 🌹</p>
+
+        <input
+            type="password"
+            id="lovePassword"
+            placeholder="Enter Secret Password"
+        >
+
+        <button onclick="checkPassword()">Unlock ❤️</button>
+
+        <p id="errorMessage"></p>
+    </div>
+</div>
+
+    <!-- Background effects -->
+    <div id="particleArea"></div>
+    <div class="background-glow"></div>
+
+    <!-- PAGE 1: WELCOME -->
+    <section id="welcome" class="page active">
+        <div class="welcome-content">
+            <p class="small-heading">A LITTLE SURPRISE FOR YOU</p>
+
+            <h1>For My Dearest</h1>
+            <h2>Hiba KK ❤️</h2>
+
+            <button class="big-heart" onclick="enterSite()">
+                ❤️
+            </button>
+
+            <p class="click-text">Touch My Heart To Open</p>
+            <p class="welcome-bottom">Made with endless love 💗</p>
+        </div>
+    </section>
+
+
+    <!-- PAGE 2: HOME -->
+    <section id="home" class="page">
+        <div class="home-content">
+
+            <div class="top-label">A SPECIAL PLACE FOR YOU</div>
+
+            <h1 class="main-title">
+                Hi My Dear <span>Angel</span> 💖
+            </h1>
+
+            <h2 class="hiba-name">Hiba KK</h2>
+
+            <p class="home-description">
+                Every little moment becomes beautiful when I think of you.
+                This little world is made just for you. ❤️
+            </p>
+
+            <div class="menu-buttons">
+                <button onclick="showPage('memories')">📸 Our Memories</button>
+                <button onclick="showPage('letter')">💌 My Love Letter</button>
+                <button onclick="showPage('surprise')">🎁 Your Surprise</button>
+                <button onclick="showPage('proposal')">💍 One Question</button>
+            </div>
+
+            <button class="music-button" onclick="toggleMusic()" id="musicButton">
+                🎵 Music: OFF
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 3: MEMORIES -->
+    <section id="memories" class="page">
+        <div class="content-card">
+
+            <p class="small-heading">LITTLE MOMENTS, BIG MEMORIES</p>
+
+            <h1>Our Beautiful Memories 📸</h1>
+
+            <p class="section-description">
+                Every picture has a little story. Every moment is special. ❤️
+            </p>
+
+            <div class="gallery">
+
+                <div class="photo-card">
+                    <img src="1.jpg" alt="Our memory 1">
+                    <p>Beautiful Moment ❤️</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="2.jpg" alt="Our memory 2">
+                    <p>Sweet Memories 💗</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="3.jpg" alt="Our memory 3">
+                    <p>Forever Special 🌹</p>
+                </div>
+
+            </div>
+
+            <button class="back-button" onclick="showPage('home')">
+                ← Back Home
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 4: LOVE LETTER -->
+    <section id="letter" class="page">
+        <div class="content-card letter-card">
+
+            <p class="small-heading">FROM THE BOTTOM OF MY HEART</p>
+
+            <h1>A Letter For You 💌</h1>
+
+            <div class="letter-paper">
+                <h2>My Dearest Hiba, ❤️</h2>
+
+                <p id="letterText"></p>
+
+                <p class="letter-signature">
+                    With all my love,<br>
+                    Yours forever ❤️
+                </p>
+            </div>
+
+            <button class="back-button" onclick="showPage('home')">
+                ← Back Home
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 5: SURPRISE GIFT -->
+    <section id="surprise" class="page">
+        <div class="content-card surprise-card">
+
+            <p class="small-heading">A LITTLE GIFT FOR MY ANGEL</p>
+
+            <h1>Your Special Surprise 🎁</h1>
+
+            <p class="section-description" id="giftHint">
+                Click the gift box and see what's waiting for you!
+            </p>
+
+            <div class="gift-scene">
+
+                <div class="gift-box" id="giftBox" onclick="openGift()">
+
+                    <div class="gift-cat" id="roseCat">
+                        <img src="rose cat.png" alt="White kitten holding a red rose">
+                    </div>
+
+                    <div class="gift-lid">
+                        <div class="gift-bow"></div>
+                    </div>
+
+                    <div class="gift-body">
+                        <div class="gift-ribbon"></div>
+                        <div class="gift-ribbon-horizontal"></div>
+                        <span class="gift-heart">♥</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h2 class="cat-message" id="catMessage">
+                Meowww! A Rose For You, Hiba! 🌹
+            </h2>
+
+            <p class="gift-message" id="giftMessage">
+                You deserve all the beautiful things in this world. ❤️
+            </p>
+
+            <button class="back-button" onclick="showPage('home')">
+                ← Back Home
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 6: PROPOSAL -->
+    <section id="proposal" class="page">
+        <div class="proposal-content">
+
+            <p class="small-heading">ONE LAST THING...</p>
+
+            <h1>My Dearest Hiba ❤️</h1>
+
+            <div class="ring-container">
+                <div class="ring">💍</div>
+                <div class="ring-glow"></div>
+            </div>
+
+            <h2 class="proposal-question">
+                Will You Be Mine Forever?
+            </h2>
+
+            <p class="proposal-description">
+                I cannot promise a perfect life, but I promise to make
+                every moment special with love, care and respect.
+            </p>
+
+            <div class="proposal-buttons">
+                <button class="yes-button" onclick="sayYes()">
+                    YES! ❤️
+                </button>
+
+                <button class="moment-button" onclick="sayNo()">
+                    I need a moment 💗
+                </button>
+            </div>
+
+            <h2 id="proposalMessage"></h2>
+
+            <button class="back-button" onclick="showPage('home')">
+                ← Back Home
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="music" src="music/song.mp3" loop></audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
